@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+}
+
+.background-canvas {
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.background-canvas .quote {
+  margin: 200px 0 0 250px;
+}
+
+.background-canvas .abstract {
+  float: right;
+  width: 800px;
+  padding: 100px;
+}
+
+.background-canvas .wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.main-container {
+  overflow-x: hidden;
+}
+
+.main-container .buttons {
+  position: absolute;
+  bottom: 100px;
+  right: 500px;
+  z-index: 5;
+  background-color: white;
+  padding: 20px;
+  width: 100px;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 5px 10px grey;
+          box-shadow: 0px 5px 10px grey;
+}
+
+.main-container .buttons button {
+  background-color: white;
+  border: none;
+}
+
+.main-container .buttons button:hover {
+  cursor: pointer;
+}
+
+.main-container .buttons .next {
+  float: right;
+}
+
+.main-container .buttons .prev {
+  float: left;
+}
+
+.main-container .slide-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100vh;
+}
+
+.main-container .slide-container img {
+  float: right;
+  z-index: 3;
+  margin-top: 160px;
+  margin-right: 180px;
+  width: 450px;
+}
+
+.main-container .slide-container p {
+  font-weight: 600;
+  color: #202046;
+  margin-top: 250px;
+  margin-left: 200px;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  z-index: 4;
+}
+
+.main-container .slide-container span {
+  display: block;
+  padding-top: 20px;
+  color: #202046;
+  margin-left: 200px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  z-index: 4;
+}
+
+.main-container .slide-container span b {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.main-container .buttons-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1210px) {
+  .background-canvas .quote {
+    margin-left: 100px;
+  }
+  .main-container .slide-container p,
+  .main-container .slide-container span {
+    margin-left: 100px;
+  }
+}
+
+@media screen and (max-width: 1026px) {
+  .background-canvas {
+    display: none;
+  }
+  .main-container {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main-container .buttons {
+    display: none;
+  }
+  .main-container .buttons-mobile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    z-index: 6;
+    margin-top: 20px;
+    padding: 10px;
+    display: block;
+    background-color: white;
+    -webkit-box-shadow: 0px 1px 10px grey;
+            box-shadow: 0px 1px 10px grey;
+    border-radius: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .main-container .buttons-mobile button {
+    border: none;
+    background-color: white;
+    padding: 0 5px;
+  }
+  .main-container .slide-container {
+    position: initial;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .main-container .slide-container img {
+    float: unset;
+    z-index: 3;
+    padding: 70px;
+    width: 450px;
+    margin: 0;
+    margin-top: 50px;
+    margin-left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    background-image: url("images/pattern-bg.svg");
+    background-size: contain;
+  }
+  .main-container .slide-container p {
+    text-align: center;
+    font-weight: 600;
+    padding: 20px;
+    color: #202046;
+    margin: 0;
+    background-image: url("images/pattern-quotes.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .main-container .slide-container span {
+    padding: 0;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 50px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
